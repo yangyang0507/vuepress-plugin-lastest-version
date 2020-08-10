@@ -1,31 +1,32 @@
 {
-  "name": "vuepress-plugin-lastest-version",
-  "version": "0.1.0",
-  "description": "Get lastest version of artifact in the $page object",
-  "main": "index.js",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/yangyang0507/vuepress-plugin-lastest-version.git"
-  },
-  "keywords": [
-    "vue",
-    "vuepress",
-    "plugin",
-    "vuepress-plugin",
-    "page",
-    "artifact",
-    "version",
-    "artifact",
-    "version"
-  ],
-  "author": "D.Yang",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/yangyang0507/vuepress-plugin-lastest-version/issues"
-  },
-  "homepage": "https://github.com/yangyang0507/vuepress-plugin-lastest-version#readme",
-  "dependencies": {},
-  "publishConfig": {
-    "access": "public"
-  }
+    "name": "vuepress-plugin-lastest-version",
+    "version": "0.1.1",
+    "description": "Get lastest version of artifact in the $page object",
+    "main": "index.js",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/yangyang0507/vuepress-plugin-lastest-version.git"
+    },
+    "keywords": [
+        "vue",
+        "vuepress",
+        "plugin",
+        "vuepress-plugin",
+        "artifact",
+        "version",
+        "artifact-version"
+    ],
+    "author": "D.Yang",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/yangyang0507/vuepress-plugin-lastest-version/issues"
+    },
+    "homepage": "https://github.com/yangyang0507/vuepress-plugin-lastest-version#readme",
+    "dependencies": {
+        "axios": "^0.19.2",
+        "cross-fetch": "^3.0.5"
+    },
+    "publishConfig": {
+        "access": "public"
+    }
 }
