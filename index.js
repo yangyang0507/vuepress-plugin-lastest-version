@@ -6,13 +6,13 @@ const xmlHttp = new XMLHttpRequest();
 
 module.exports = (options = {}, context) => ({
   extendPageData($page) {
-    const { repo, type } = options;
-    const version = getLastestVersion($page, repo, type);
+    const { type, repo } = options;
+    const version = getLastestVersion(type, repo);
     $page.lastestVersion = version;
   }
 });
 
-function getLastestVersion($page, repo, type) {
+function getLastestVersion(type, repo) {
   let version;
   try {
     const url = typeVersionUrl[type];
