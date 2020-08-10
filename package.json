@@ -1,0 +1,31 @@
+{
+  "name": "vuepress-plugin-lastest-version",
+  "version": "0.1.0",
+  "description": "Get lastest version of artifact in the $page object",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yangyang0507/vuepress-plugin-lastest-version.git"
+  },
+  "keywords": [
+    "vue",
+    "vuepress",
+    "plugin",
+    "vuepress-plugin",
+    "page",
+    "artifact",
+    "version",
+    "artifact",
+    "version"
+  ],
+  "author": "D.Yang",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/yangyang0507/vuepress-plugin-lastest-version/issues"
+  },
+  "homepage": "https://github.com/yangyang0507/vuepress-plugin-lastest-version#readme",
+  "dependencies": {},
+  "publishConfig": {
+    "access": "public"
+  }
+}

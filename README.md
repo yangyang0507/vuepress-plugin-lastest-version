@@ -1,2 +1,3 @@
 # vuepress-plugin-lastest-version
-Get lastest version for artifact
+
+Get lastest version of artifact
