@@ -11,10 +11,15 @@ export default {
   methods: {
     changeVersion: function (v) {
       try {
-        this.$el.innerHTML = this.$el.innerHTML.replace(
-          /latest-version/g,
-          this.version
-        );
+        let mainElements = this.$el.getElementsByTagName("main");
+        if (mainElements !== undefined) {
+          mainElements.forEach((mainElement) => {
+            mainElement.innerHTML = mainElement.innerHTML.replace(
+              /latest-version/g,
+              this.version
+            );
+          });
+        }
       } catch (e) {
         /* do not handle for now */
       }
