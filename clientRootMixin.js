@@ -11,7 +11,7 @@ export default {
   methods: {
     changeVersion: function (v) {
       try {
-        this.$el.innerHTML = this.$el.outerHTML.replace(
+        this.$el.innerHTML = this.$el.innerHTML.replace(
           /latest-version/g,
           this.version
         );
