@@ -2,16 +2,16 @@
 
 [![npm](https://img.shields.io/npm/v/vuepress-plugin-lastest-version?style=flat-square)](https://www.npmjs.com/package/vuepress-plugin-lastest-version) [![npm](https://img.shields.io/npm/dm/vuepress-plugin-lastest-version?style=flat-square)](https://www.npmjs.com/package/vuepress-plugin-lastest-version) [![GitHub](https://img.shields.io/github/license/yangyang0507/vuepress-plugin-lastest-version?style=flat-square)](https://www.npmjs.com/package/vuepress-plugin-lastest-version)
 
-Get lastest version of artifact for your vuepress doc
+为你的文档获取最新的制品版本
 
-## Install
+## 安装
 
 ```shell
 yarn add -D vuepress-plugin-lastest-version
 # OR npm install -D vuepress-plugin-lastest-version
 ```
 
-## Use
+## 使用
 
 ```javascript
 module.exports = {
@@ -27,24 +27,24 @@ module.exports = {
 
 ### type
 
-- type: string
-- default: null
-- requried: true
-- value: maven | npm
+- 类型: string
+- 默认值: null
+- 是否必须: true
+- 可选值: maven | npm
 
-Choose which artifact type need get lastest version
+选择你需要获取最新版本的制品类型
 
 ### repo
 
-- type: string
-- default: null
-- requried: true
-- value: your repo
+- 类型: string
+- 默认值: null
+- 是否必须: true
+- 可选值: your repo
 
-When type is maven, your repo value is :groupId/:artifactId
-When type is npm, your repo value is :packageName
+当制品类型是 maven 时，你的 repo 配置应该为 :groupId/:artifactId
+当制品类型是 npm 时，你的 repo 配置应该为 :packageName
 
-e.g.
+示例
 
 ```javascript
 module.exports = {
@@ -68,6 +68,4 @@ module.exports = {
 };
 ```
 
-After configuration, the plugin will replace all `lastest-version` character to really lastest version.
-
-So, don't forgot to add `lastest-version` placeholder to your document so that this plugin can change version normally.
+在配置好插件之后，插件将会替换所有的 `lastest-version` 字符为最新的制品版本号，所以别忘了在你的文档中加入 `lastest-version` 占位符以保证插件能够正常替换版本号。
