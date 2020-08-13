@@ -11,10 +11,10 @@ export default {
   methods: {
     changeVersion: function (v) {
       try {
-        let mainElements = this.$el.getElementsByTagName("main");
-        if (mainElements !== undefined) {
-          mainElements.forEach((mainElement) => {
-            mainElement.innerHTML = mainElement.innerHTML.replace(
+        let elements = this.$el.getElementsByClassName("content__default");
+        if (elements !== undefined) {
+          elements.forEach((element) => {
+            element.innerHTML = element.innerHTML.replace(
               /latest-version/g,
               this.version
             );
