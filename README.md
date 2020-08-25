@@ -28,7 +28,7 @@ module.exports = {
 ### type
 
 - type: string
-- default: null
+- default: maven
 - requried: true
 - value: maven | npm
 
@@ -37,7 +37,7 @@ Choose which artifact type need get lastest version
 ### repo
 
 - type: string
-- default: null
+- default: com.baomidou/mybatis-plus
 - requried: true
 - value: your repo
 

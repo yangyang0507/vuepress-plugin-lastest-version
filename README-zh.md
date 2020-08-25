@@ -28,7 +28,7 @@ module.exports = {
 ### type
 
 - 类型: string
-- 默认值: null
+- 默认值: maven
 - 是否必须: true
 - 可选值: maven | npm
 
@@ -37,7 +37,7 @@ module.exports = {
 ### repo
 
 - 类型: string
-- 默认值: null
+- 默认值: com.baomidou/mybatis-plus
 - 是否必须: true
 - 可选值: your repo
 
