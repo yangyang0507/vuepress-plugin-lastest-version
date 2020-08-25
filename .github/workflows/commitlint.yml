@@ -11,5 +11,3 @@ jobs:
         with:
           fetch-depth: 0
       - uses: wagoid/commitlint-github-action@v2
-        with:
-          failOnWarnings: true
