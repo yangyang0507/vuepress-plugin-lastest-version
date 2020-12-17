@@ -1,6 +1,6 @@
 {
     "name": "vuepress-plugin-lastest-version",
-    "version": "0.2.0",
+    "version": "0.2.1",
     "description": "Get lastest version of artifact for your document",
     "main": "index.js",
     "repository": {
