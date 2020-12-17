@@ -18,26 +18,37 @@ module.exports = {
   plugins: [
     "lastest-version",
     {
-      type: "maven",
-      repo: "com.baomidou/mybatis-plus",
-    },
-  ],
+      repos: [
+        {
+          keywords: "mybatis-plus-latest-version",
+          type: "maven",
+          repo: "com.baomidou/mybatis-plus",
+        }
+      ]
+    }
+  ]
 };
 ```
 
-### type
+### repos.keywords
 
 - type: string
-- default: maven
+- requried: true
+- value: maven | npm
+
+The keywords which will be replaced
+
+### repos.type
+
+- type: string
 - requried: true
 - value: maven | npm
 
 Choose which artifact type need get lastest version
 
-### repo
+### repos.repo
 
 - type: string
-- default: com.baomidou/mybatis-plus
 - requried: true
 - value: your repo
 
