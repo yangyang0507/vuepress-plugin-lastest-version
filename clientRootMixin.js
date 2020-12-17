@@ -10,28 +10,35 @@ export default {
   }),
   methods: {
     changeVersion: function (v) {
-      try {
-        let repos = CONFIG.repos;
-        let elements = this.$el.getElementsByClassName("content__default");
-        if (elements !== undefined) {
-          elements.forEach((element) => {
-            var content = element.innerHTML;
-            repos.forEach((repoConfig) => {
-              let keywords = repoConfig.keywords;
-              let version = this.version[repoConfig.repo];
-              content = content.replace(keywords, version);
-            });
-            element.innerHTML = content;
-          });
+      let repos = CONFIG.repos;
+      if (typeof repos !== "undefined" && repos.length > 0) {
+        try {
+          setTimeout(() => {
+            var elements = this.$el.getElementsByClassName("content__default");
+            if (elements !== undefined) {
+              elements.forEach((element) => {
+                var content = element.innerHTML;
+                repos.forEach((repoConfig) => {
+                  let keywords = repoConfig.keywords;
+                  let version = this.version[repoConfig.repo];
+                  content = content.replace(keywords, version);
+                });
+                element.innerHTML = content;
+              });
+            }
+          }, 1000);
+        } catch (e) {
+          /* do not handle for now */
         }
-      } catch (e) {
-        /* do not handle for now */
+      } else {
+        console.warn("repo config is empty, ignore");
+        return;
       }
     },
     getLastestVersion: function (v) {
-      try {
-        let repos = CONFIG.repos;
-        if (typeof repos !== "undefined" && repos.length > 0) {
+      let repos = CONFIG.repos;
+      if (typeof repos !== "undefined" && repos.length > 0) {
+        try {
           repos.forEach((repoConfig) => {
             let currentRepoVersion = this.version[repoConfig.repo];
             if (currentRepoVersion === undefined || currentRepoVersion === "") {
@@ -47,18 +54,21 @@ export default {
                     return res.json();
                   })
                   .then((versionInfo) => {
-                    self.version[repoConfig.repo] = versionInfo.value.replace("v", "");
+                    self.version[repoConfig.repo] = versionInfo.value.replace(
+                      "v",
+                      ""
+                    );
                   });
               }
             }
             this.changeVersion();
           });
-        } else {
-          console.warn("repo config is empty, ignore");
-          return;
+        } catch (e) {
+          /* do not handle for now */
         }
-      } catch (e) {
-        /* do not handle for now */
+      } else {
+        console.warn("repo config is empty, ignore");
+        return;
       }
     },
   },
