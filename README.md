@@ -34,7 +34,7 @@ module.exports = {
 
 - type: string
 - requried: true
-- value: maven | npm
+- value: your keywords
 
 The keywords which will be replaced
 
@@ -62,23 +62,33 @@ module.exports = {
   plugins: [
     "lastest-version",
     {
-      type: "maven",
-      repo: "com.baomidou/mybatis-plus",
-    },
-  ],
+      repos: [
+        {
+          keywords: "mybatis-plus-latest-version",
+          type: "maven",
+          repo: "com.baomidou/mybatis-plus",
+        }
+      ]
+    }
+  ]
 };
 
 module.exports = {
   plugins: [
     "lastest-version",
     {
-      type: "npm",
-      repo: "vuepress-plugin-lastest-version",
-    },
-  ],
+      repos: [
+        {
+          keywords: "vuepress-plugin-latest-version",
+          type: "npm",
+          repo: "vuepress-plugin-lastest-version",
+        }
+      ]
+    }
+  ]
 };
 ```
 
-After configuration, the plugin will replace all `lastest-version` character to really lastest version.
+After configuration, the plugin will replace all keywords character to really lastest version.
 
-So, don't forgot to add `lastest-version` placeholder to your document so that this plugin can change version normally.
+So, don't forgot to add keywords placeholder to your document so that this plugin can change version normally.

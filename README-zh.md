@@ -18,26 +18,37 @@ module.exports = {
   plugins: [
     "lastest-version",
     {
-      type: "maven",
-      repo: "com.baomidou/mybatis-plus",
-    },
-  ],
+      repos: [
+        {
+          keywords: "mybatis-plus-latest-version",
+          type: "maven",
+          repo: "com.baomidou/mybatis-plus",
+        }
+      ]
+    }
+  ]
 };
 ```
 
-### type
+### repos.keywords
 
 - 类型: string
-- 默认值: maven
+- 是否必须: true
+- 可选值: your keywords
+
+将要被替换的关键字
+
+### repos.type
+
+- 类型: string
 - 是否必须: true
 - 可选值: maven | npm
 
 选择你需要获取最新版本的制品类型
 
-### repo
+### repos.repo
 
 - 类型: string
-- 默认值: com.baomidou/mybatis-plus
 - 是否必须: true
 - 可选值: your repo
 
@@ -51,21 +62,31 @@ module.exports = {
   plugins: [
     "lastest-version",
     {
-      type: "maven",
-      repo: "com.baomidou/mybatis-plus",
-    },
-  ],
+      repos: [
+        {
+          keywords: "mybatis-plus-latest-version",
+          type: "maven",
+          repo: "com.baomidou/mybatis-plus",
+        }
+      ]
+    }
+  ]
 };
 
 module.exports = {
   plugins: [
     "lastest-version",
     {
-      type: "npm",
-      repo: "vuepress-plugin-lastest-version",
-    },
-  ],
+      repos: [
+        {
+          keywords: "vuepress-plugin-latest-version",
+          type: "npm",
+          repo: "vuepress-plugin-lastest-version",
+        }
+      ]
+    }
+  ]
 };
 ```
 
-在配置好插件之后，插件将会替换所有的 `lastest-version` 字符为最新的制品版本号，所以别忘了在你的文档中加入 `lastest-version` 占位符以保证插件能够正常替换版本号。
+在配置好插件之后，插件将会替换所有的配置中定义的关键字字符为最新的制品版本号，所以别忘了在你的文档中加入关键字占位符以保证插件能够正常替换版本号。
