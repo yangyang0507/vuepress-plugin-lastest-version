@@ -1,6 +1,6 @@
 {
     "name": "vuepress-plugin-lastest-version",
-    "version": "0.2.3",
+    "version": "0.2.4",
     "description": "Get lastest version of artifact for your document",
     "main": "index.js",
     "repository": {
@@ -23,7 +23,7 @@
     },
     "homepage": "https://github.com/yangyang0507/vuepress-plugin-lastest-version#readme",
     "dependencies": {
-        "cross-fetch": "^3.0.5"
+        "fetch-jsonp": "^1.1.3"
     },
     "publishConfig": {
         "access": "public"

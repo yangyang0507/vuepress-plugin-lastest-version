@@ -1,4 +1,4 @@
-import fetch from "cross-fetch";
+var fetchJsonp = require("fetch-jsonp");
 
 export default {
   data: () => ({
@@ -46,7 +46,7 @@ export default {
               const templateUrl = this.urls[repoConfig.type];
               if (templateUrl !== null && templateUrl !== undefined) {
                 const url = templateUrl.replace(/:repo/g, repoConfig.repo);
-                fetch(url)
+                fetchJsonp(url)
                   .then((res) => {
                     if (res.status >= 400) {
                       throw new Error("Bad response from server");
